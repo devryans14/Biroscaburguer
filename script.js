@@ -1,106 +1,134 @@
 const menuItems = [
   {
-    id: 1,
+    id: 11,
+    name: 'X-Bacon',
+    shortCategory: 'burger',
+    categoryLabel: 'Clássico com bacon',
+    description:
+      'Pão, hambúrguer, muçarela, bacon, alface, tomate, milho e batata-palha.',
+    ingredients: ['Pão', 'Hambúrguer', 'Muçarela', 'Bacon', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+    price: 16,
+    image:
+      'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80',
+    category: 'burger',
+  },
+  {
+    id: 12,
+    name: 'X-Bacon Egg',
+    shortCategory: 'burger',
+    categoryLabel: 'Bacon com ovo',
+    description:
+      'Pão, hambúrguer, muçarela, ovo, bacon, alface, tomate, milho e batata-palha.',
+    ingredients: ['Pão', 'Hambúrguer', 'Muçarela', 'Ovo', 'Bacon', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+    price: 18,
+    image:
+      'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80',
+    category: 'burger',
+  },
+  {
+    id: 13,
+    name: 'Burger Cheddar',
+    shortCategory: 'burger',
+    categoryLabel: 'Cheddar cremoso',
+    description:
+      'Pão, hambúrguer, molho cheddar, alface, tomate, milho e batata-palha.',
+    ingredients: ['Pão', 'Hambúrguer', 'Molho cheddar', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+    price: 15,
+    image:
+      'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=80',
+    category: 'burger',
+  },
+  {
+    id: 14,
+    name: 'Cheddar Egg',
+    shortCategory: 'burger',
+    categoryLabel: 'Cheddar completo',
+    description:
+      'Pão, hambúrguer, molho cheddar, presunto, muçarela, ovo, bacon, alface, tomate, milho e batata-palha.',
+    ingredients: ['Pão', 'Hambúrguer', 'Molho cheddar', 'Presunto', 'Muçarela', 'Ovo', 'Bacon', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+    price: 22,
+    image:
+      'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=900&q=80',
+    category: 'burger',
+  },
+  {
+    id: 15,
     name: 'Cheddar Bacon',
-    description: 'Pão artesanal, cheddar cremoso, bacon crocante, alface e molho especial.',
-    price: 25.9,
-    emoji: '🍔',
+    shortCategory: 'burger',
+    categoryLabel: 'Cheddar e bacon',
+    description:
+      'Pão, hambúrguer, molho cheddar, bacon, alface, tomate, milho e batata-palha.',
+    ingredients: ['Pão', 'Hambúrguer', 'Molho cheddar', 'Bacon', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+    price: 20,
+    image:
+      'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=900&q=80',
     category: 'burger',
   },
   {
-    id: 2,
-    name: 'Duplo Smash',
-    description: 'Dois smash burgers, queijo derretido, cebola caramelizada e molho da casa.',
-    price: 27.9,
-    emoji: '🍔',
+    id: 16,
+    name: 'X-Sichaburguer',
+    shortCategory: 'burger',
+    categoryLabel: 'Salsicha e burger',
+    description:
+      'Pão, hambúrguer, salsicha, presunto, frango, muçarela, ovo, alface, tomate, milho e batata-palha.',
+    ingredients: ['Pão', 'Hambúrguer', 'Salsicha', 'Presunto', 'Frango', 'Muçarela', 'Ovo', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+    price: 24,
+    image:
+      'https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&w=900&q=80',
     category: 'burger',
   },
   {
-    id: 3,
-    name: 'Chicken Crispy',
-    description: 'Frango crocante, queijo prato, alface americana e maionese verde.',
-    price: 24.9,
-    emoji: '🍔',
+    id: 17,
+    name: 'X-Quase Tudo',
+    shortCategory: 'burger',
+    categoryLabel: 'Mega recheado',
+    description:
+      'Pão, 2 hambúrgueres, salsicha, ovo, bacon, frango, presunto, muçarela, alface, tomate, milho e batata-palha.',
+    ingredients: ['Pão', '2 hambúrgueres', 'Salsicha', 'Ovo', 'Bacon', 'Frango', 'Presunto', 'Muçarela', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+    price: 26,
+    image:
+      'https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=900&q=80',
     category: 'burger',
   },
   {
-    id: 4,
-    name: 'Burger Salad',
-    description: 'Blend bovino, queijo minas, rúcula, tomate fresco e molho de ervas.',
-    price: 26.9,
-    emoji: '🍔',
+    id: 18,
+    name: 'X-Tudo',
+    shortCategory: 'burger',
+    categoryLabel: 'O mais completo',
+    description:
+      'Pão, hambúrguer bovino, hambúrguer de frango, ovo, bacon, abacaxi, calabresa, frango, salsicha, presunto, muçarela, alface, tomate, milho e batata-palha.',
+    ingredients: ['Pão', 'Hambúrguer bovino', 'Hambúrguer de frango', 'Ovo', 'Bacon', 'Abacaxi', 'Calabresa', 'Frango', 'Salsicha', 'Presunto', 'Muçarela', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+    price: 28,
+    image:
+      'https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=900&q=80',
     category: 'burger',
   },
   {
-    id: 5,
-    name: 'Monster Onion',
-    description: 'Hambúrguer alto, onion rings, cheddar, picles e barbecue defumado.',
-    price: 29.9,
-    emoji: '🍔',
-    category: 'burger',
-  },
-  {
-    id: 6,
-    name: 'Pulled Beef',
-    description: 'Carne desfiada, queijo meia cura, cebola roxa e maionese especial.',
-    price: 31.9,
-    emoji: '🍔',
-    category: 'burger',
-  },
-  {
-    id: 7,
-    name: 'Batata Frita',
-    description: 'Porção grande crocante com molho burgerhub incluso.',
-    price: 9.9,
-    emoji: '🍟',
+    id: 19,
+    name: 'X-Biroskinha',
+    shortCategory: 'side',
+    categoryLabel: 'Especial da casa',
+    description:
+      'Batata frita, molho cheddar, pão, 2 hambúrgueres de carne, 2 ovos, presunto, muçarela, bacon, frango, salsicha, abacaxi, alface, tomate, milho e batata-palha.',
+    ingredients: ['Batata frita', 'Molho cheddar', 'Pão', '2 hambúrgueres de carne', '2 ovos', 'Presunto', 'Muçarela', 'Bacon', 'Frango', 'Salsicha', 'Abacaxi', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+    price: 36,
+    image:
+      'https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=900&q=80',
     category: 'side',
-  },
-  {
-    id: 8,
-    name: 'Milk Shake',
-    description: 'Chocolate, morango ou ovomaltine, batido na hora.',
-    price: 16.9,
-    emoji: '🥤',
-    category: 'drink',
-
-  },
-  {
-    id: 5,
-    name: 'Refrigerante Lata',
-    description: 'Escolha entre cola, guaraná ou laranja geladinho.',
-    price: 6.5,
-    emoji: '🥤',
-    category: 'drink',
-  },
-  {
-    id: 6,
-    name: 'Brownie com Sorvete',
-    description: 'Sobremesa cremosa com calda de chocolate.',
-    price: 14.9,
-    emoji: '🍨',
-    category: 'dessert',
   },
 ];
 
 const categoryLabels = {
-  all: 'Todos os itens do cardápio disponíveis agora.',
-  burger: 'Hambúrgueres artesanais preparados na hora.',
-  side: 'Porções e acompanhamentos para completar seu pedido.',
-  drink: 'Bebidas e shakes para acompanhar seu combo.',
-  dessert: 'Sobremesas para fechar o pedido com chave de ouro.',
+  all: 'Conheça os lanches da Birosca Burguer com descrições fiéis aos ingredientes do cardápio.',
+  burger: 'Hambúrgueres montados com os ingredientes informados no cardápio da imagem.',
+  side: 'Especialidades e porções reforçadas para quem quer pedir grande.',
+  drink: 'Nenhuma bebida cadastrada nesta seleção.',
+  dessert: 'Nenhuma sobremesa cadastrada nesta seleção.',
 };
 
-  },
-];
-
 const featuredItems = menuItems.slice(0, 4);
-const burgerItems = menuItems.filter((item) => item.category === 'burger');
-
-
-const cart = [
-  { id: 1, quantity: 1 },
-  { id: 8, quantity: 1 },
-];
+const burgerItems = menuItems;
+const cart = [];
 
 let activeCategory = 'all';
 
@@ -115,16 +143,13 @@ const drawer = document.getElementById('details-drawer');
 const drawerTitle = document.getElementById('drawer-title');
 const drawerBody = document.getElementById('drawer-body');
 const toast = document.getElementById('toast');
-const navLinks = [...document.querySelectorAll('.nav-link')];
 const cartPanel = document.getElementById('cart-panel');
 
-const formatBRL = (value) =>
-  value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const formatBRL = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
 function getItem(id) {
-  return menuItems.find((item) => item.id === id);
+  return menuItems.find((item) => item.id === Number(id));
 }
-
 
 function getFilteredItems() {
   if (activeCategory === 'all') return menuItems;
@@ -132,82 +157,28 @@ function getFilteredItems() {
 }
 
 function showToast(message) {
+  if (!toast) return;
   toast.textContent = message;
   toast.classList.add('toast--visible');
-
   clearTimeout(showToast.timeoutId);
-  showToast.timeoutId = setTimeout(() => {
-    toast.classList.remove('toast--visible');
-  }, 2600);
+  showToast.timeoutId = setTimeout(() => toast.classList.remove('toast--visible'), 2200);
 }
 
-function openDrawer(title, content) {
-  drawerTitle.textContent = title;
-  drawerBody.innerHTML = content;
-  drawer.classList.add('drawer--open');
-  document.body.classList.add('drawer-open');
-}
-
-function closeDrawer() {
-  drawer.classList.remove('drawer--open');
-  document.body.classList.remove('drawer-open');
-}
-
-function renderCards() {
-  const filteredItems = getFilteredItems();
-
-  cardsContainer.innerHTML = filteredItems
-    .map(
-      (item) => `
-        <article class="menu-card">
-          <div class="menu-card__image">${item.emoji}</div>
-          <span class="menu-card__tag">${item.category}</span>
-          <h4>${item.name}</h4>
-          <p>${item.description}</p>
-          <div class="menu-card__bottom">
-            <span class="price">${formatBRL(item.price)}</span>
-            <div class="menu-card__actions">
-              <button class="ghost-btn details-btn" type="button" data-id="${item.id}">Detalhes</button>
-              <button class="add-btn" type="button" data-id="${item.id}" aria-label="Adicionar ${item.name}">+</button>
-            </div>
-          </div>
-        </article>
-      `,
-    )
-    .join('');
-
-  if (!filteredItems.length) {
-    cardsContainer.innerHTML = '<p class="empty-state">Nenhum item encontrado nessa categoria.</p>';
-  }
-}
-
-function renderCart() {
-  if (!cart.length) {
-    cartItemsContainer.innerHTML = '<p class="empty-state">Seu carrinho está vazio. Adicione itens para continuar.</p>';
-  } else {
-    cartItemsContainer.innerHTML = cart
-      .map(({ id, quantity }) => {
-        const item = getItem(id);
-        return `
-          <article class="cart-item">
-            <div class="cart-item__thumb">${item.emoji}</div>
-            <div class="cart-item__info">
-              <h4>${item.name}</h4>
-              <div class="qty-box">
-                <button type="button" data-action="decrease" data-id="${id}">−</button>
-                <span>${quantity}</span>
-                <button type="button" data-action="increase" data-id="${id}">+</button>
-              </div>
-
-function createCardMarkup(item) {
+function createCardMarkup(item, showDetails = true) {
   return `
     <article class="menu-card">
-      <div class="menu-card__image">${item.emoji}</div>
+      <div class="menu-card__image">
+        <img src="${item.image}" alt="Foto realista do produto ${item.name}" loading="lazy" />
+      </div>
+      <span class="menu-card__tag">${item.categoryLabel}</span>
       <h4>${item.name}</h4>
       <p>${item.description}</p>
       <div class="menu-card__bottom">
         <span class="price">${formatBRL(item.price)}</span>
-        <button class="add-btn" data-id="${item.id}" aria-label="Adicionar ${item.name}">+</button>
+        <div class="menu-card__actions">
+          ${showDetails ? `<button class="ghost-btn details-btn" type="button" data-id="${item.id}">Detalhes</button>` : ''}
+          <button class="add-btn" type="button" data-id="${item.id}" aria-label="Adicionar ${item.name}">+</button>
+        </div>
       </div>
     </article>
   `;
@@ -215,266 +186,169 @@ function createCardMarkup(item) {
 
 function renderCards() {
   if (!cardsContainer) return;
-  cardsContainer.innerHTML = featuredItems.map(createCardMarkup).join('');
+  const items = activeCategory === 'all' ? featuredItems : getFilteredItems();
+  cardsContainer.innerHTML = items.length
+    ? items.map((item) => createCardMarkup(item)).join('')
+    : '<p class="empty-state">Nenhum item encontrado nessa categoria.</p>';
 }
 
 function renderAllBurgers() {
   if (!allBurgersGrid) return;
-  allBurgersGrid.innerHTML = burgerItems.map(createCardMarkup).join('');
+  allBurgersGrid.innerHTML = burgerItems.map((item) => createCardMarkup(item, false)).join('');
 }
 
 function renderCart() {
   if (!cartItemsContainer || !subtotalPrice || !cartBadge) return;
+
+  if (!cart.length) {
+    cartItemsContainer.innerHTML = '<p class="empty-state">Seu carrinho está vazio. Adicione um lanche para continuar.</p>';
+    subtotalPrice.textContent = formatBRL(0);
+    cartBadge.textContent = '0';
+    return;
+  }
 
   cartItemsContainer.innerHTML = cart
     .map(({ id, quantity }) => {
       const item = getItem(id);
       return `
         <article class="cart-item">
-          <div class="cart-item__thumb">${item.emoji}</div>
+          <div class="cart-item__thumb"><img src="${item.image}" alt="Miniatura de ${item.name}" /></div>
           <div class="cart-item__info">
             <h4>${item.name}</h4>
             <div class="qty-box">
-              <button data-action="decrease" data-id="${id}">−</button>
+              <button type="button" data-action="decrease" data-id="${id}">−</button>
               <span>${quantity}</span>
-              <button data-action="increase" data-id="${id}">+</button>
-
+              <button type="button" data-action="increase" data-id="${id}">+</button>
             </div>
-            <strong>${formatBRL(item.price * quantity)}</strong>
-          </article>
-        `;
-      })
-      .join('');
-  }
+          </div>
+          <strong>${formatBRL(item.price * quantity)}</strong>
+        </article>
+      `;
+    })
+    .join('');
 
   const subtotal = cart.reduce((total, entry) => total + getItem(entry.id).price * entry.quantity, 0);
   const totalItems = cart.reduce((total, entry) => total + entry.quantity, 0);
-
   subtotalPrice.textContent = formatBRL(subtotal);
-  cartBadge.textContent = totalItems;
+  cartBadge.textContent = String(totalItems);
+}
+
+function addToCart(id) {
+  const existing = cart.find((entry) => entry.id === id);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ id, quantity: 1 });
+  }
+  renderCart();
+  if (cartPanel) {
+    cartPanel.classList.add('order-panel--highlight');
+    setTimeout(() => cartPanel.classList.remove('order-panel--highlight'), 800);
+  }
+  showToast(`${getItem(id).name} adicionado ao pedido.`);
+}
+
+function updateQuantity(id, action) {
+  const item = cart.find((entry) => entry.id === id);
+  if (!item) return;
+  item.quantity += action === 'increase' ? 1 : -1;
+  if (item.quantity <= 0) {
+    const index = cart.findIndex((entry) => entry.id === id);
+    cart.splice(index, 1);
+  }
+  renderCart();
+}
+
+function openDrawerForItem(item) {
+  if (!drawer || !drawerTitle || !drawerBody) return;
+  drawerTitle.textContent = item.name;
+  drawerBody.innerHTML = `
+    <article class="drawer-card">
+      <div class="drawer-card__hero">
+        <img src="${item.image}" alt="Foto do produto ${item.name}" />
+      </div>
+      <div>
+        <p>${item.description}</p>
+        <strong class="price">${formatBRL(item.price)}</strong>
+      </div>
+      <div>
+        <h4>Ingredientes</h4>
+        <ul class="drawer-list">
+          ${item.ingredients.map((ingredient) => `<li>${ingredient}</li>`).join('')}
+        </ul>
+      </div>
+      <button class="btn btn--primary drawer-link" type="button" data-id="${item.id}">Adicionar ao pedido</button>
+    </article>
+  `;
+  drawer.classList.add('drawer--open');
+  document.body.classList.add('drawer-open');
+}
+
+function closeDrawer() {
+  if (!drawer) return;
+  drawer.classList.remove('drawer--open');
+  document.body.classList.remove('drawer-open');
 }
 
 function setActiveCategory(category) {
   activeCategory = category;
   chips.forEach((chip) => chip.classList.toggle('chip--active', chip.dataset.category === category));
-  menuDescription.textContent = categoryLabels[category];
+  if (menuDescription) {
+    menuDescription.textContent = categoryLabels[category] || categoryLabels.all;
+  }
   renderCards();
-  document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function updateCart(id, type) {
-  const target = cart.find((entry) => entry.id === id);
-  const item = getItem(id);
-
-  if (!target) {
-    cart.push({ id, quantity: 1 });
-    renderCart();
-    showToast(`${item.name} adicionado ao pedido.`);
-    return;
-  }
-
-  if (type === 'increase') {
-    target.quantity += 1;
-    showToast(`+1 ${item.name} no carrinho.`);
-  }
-
-  if (type === 'decrease') {
-    target.quantity -= 1;
-    if (target.quantity <= 0) {
-      cart.splice(cart.indexOf(target), 1);
-      showToast(`${item.name} removido do pedido.`);
-    } else {
-      showToast(`Quantidade de ${item.name} atualizada.`);
-    }
-  }
-
-  renderCart();
-}
-
-
-function showItemDetails(id) {
-  const item = getItem(id);
-
-  openDrawer(
-    item.name,
-    `
-      <div class="drawer-card">
-        <div class="drawer-card__hero">${item.emoji}</div>
-        <p>${item.description}</p>
-        <ul class="drawer-list">
-          <li><strong>Categoria:</strong> ${item.category}</li>
-          <li><strong>Preço:</strong> ${formatBRL(item.price)}</li>
-          <li><strong>Preparo:</strong> Entre 12 e 18 minutos.</li>
-        </ul>
-        <button type="button" class="checkout-btn drawer-add-btn" data-id="${item.id}">Adicionar ao pedido</button>
-      </div>
-    `,
-  );
-}
-
-function showProfile() {
-  openDrawer(
-    'Área do cliente',
-    `
-      <div class="drawer-card">
-        <p><strong>O botão de perfil agora funciona</strong> e abre um resumo rápido do cliente.</p>
-        <ul class="drawer-list">
-          <li>Último pedido: Cheddar Bacon + Milk Shake</li>
-          <li>Endereço principal: Rua do Sabor, 123</li>
-          <li>Status Burger Points: 180 pontos</li>
-        </ul>
-        <button type="button" class="secondary-btn" id="repeat-last-order-btn">Repetir último pedido</button>
-      </div>
-    `,
-  );
-}
-
-function showContact() {
-  openDrawer(
-    'Contato BurgerHub',
-    `
-      <div class="drawer-card">
-        <p>Escolha como deseja falar com a equipe BurgerHub.</p>
-        <ul class="drawer-list">
-          <li>WhatsApp: (11) 99999-0000</li>
-          <li>Telefone: (11) 4002-8922</li>
-          <li>Funcionamento: todos os dias, das 18h às 23h30</li>
-        </ul>
-        <a class="btn btn--primary drawer-link" href="mailto:contato@burgerhub.com.br">Enviar e-mail</a>
-      </div>
-    `,
-  );
-}
-
-function showCheckout() {
-  const subtotal = cart.reduce((total, entry) => total + getItem(entry.id).price * entry.quantity, 0);
-  const deliveryFee = cart.length ? 6.9 : 0;
-  const total = subtotal + deliveryFee;
-
-  openDrawer(
-    'Finalizar pedido',
-    `
-      <div class="drawer-card">
-        <p>Confira o fechamento do pedido antes de concluir.</p>
-        <ul class="drawer-list">
-          <li><strong>Itens:</strong> ${formatBRL(subtotal)}</li>
-          <li><strong>Entrega:</strong> ${formatBRL(deliveryFee)}</li>
-          <li><strong>Total:</strong> ${formatBRL(total)}</li>
-        </ul>
-        <button type="button" class="checkout-btn" id="confirm-order-btn" ${cart.length ? '' : 'disabled'}>
-          Confirmar pedido
-        </button>
-      </div>
-    `,
-  );
-}
-
-function addClassicCombo() {
-  [1, 3, 5].forEach((id) => updateCart(id, 'increase'));
-  showToast('Combo clássico adicionado: hambúrguer, batata e bebida.');
-}
-
-cardsContainer.addEventListener('click', (event) => {
-  const addButton = event.target.closest('.add-btn');
-  if (addButton) {
-    updateCart(Number(addButton.dataset.id), 'increase');
+document.addEventListener('click', (event) => {
+  const addButton = event.target.closest('.add-btn, .drawer-link');
+  if (addButton?.dataset.id) {
+    addToCart(Number(addButton.dataset.id));
+    if (addButton.classList.contains('drawer-link')) closeDrawer();
     return;
   }
 
   const detailsButton = event.target.closest('.details-btn');
-  if (detailsButton) {
-    showItemDetails(Number(detailsButton.dataset.id));
+  if (detailsButton?.dataset.id) {
+    openDrawerForItem(getItem(detailsButton.dataset.id));
+    return;
   }
 
-[cardsContainer, allBurgersGrid].forEach((container) => {
-  if (!container) return;
-
-  container.addEventListener('click', (event) => {
-    const button = event.target.closest('.add-btn');
-    if (!button) return;
-
-    updateCart(Number(button.dataset.id), 'increase');
-  });
-
-});
-
-if (cartItemsContainer) {
-  cartItemsContainer.addEventListener('click', (event) => {
-    const button = event.target.closest('button[data-action]');
-    if (!button) return;
-
-    updateCart(Number(button.dataset.id), button.dataset.action);
-  });
-}
-
-document.getElementById('see-all-btn').addEventListener('click', () => {
-  setActiveCategory('all');
-  showToast('Todos os itens do cardápio foram exibidos.');
-});
-
-document.getElementById('open-cart-btn').addEventListener('click', () => {
-  cartPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  cartPanel.classList.add('order-panel--highlight');
-  showToast('Painel do pedido aberto.');
-  setTimeout(() => cartPanel.classList.remove('order-panel--highlight'), 1800);
-});
-
-document.getElementById('profile-btn').addEventListener('click', showProfile);
-document.getElementById('filter-drinks-btn').addEventListener('click', () => setActiveCategory('drink'));
-document.getElementById('contact-btn').addEventListener('click', showContact);
-document.getElementById('checkout-btn').addEventListener('click', showCheckout);
-document.querySelector('[data-quick-add="combo"]').addEventListener('click', addClassicCombo);
-document.getElementById('close-drawer-btn').addEventListener('click', closeDrawer);
-
-document.addEventListener('click', (event) => {
-  if (event.target === drawer) {
-    closeDrawer();
+  const qtyButton = event.target.closest('[data-action][data-id]');
+  if (qtyButton) {
+    updateQuantity(Number(qtyButton.dataset.id), qtyButton.dataset.action);
+    return;
   }
 
-  if (event.target.id === 'repeat-last-order-btn') {
-    [1, 4].forEach((id) => updateCart(id, 'increase'));
-    closeDrawer();
-  }
-
-  if (event.target.classList.contains('drawer-add-btn')) {
-    updateCart(Number(event.target.dataset.id), 'increase');
-    closeDrawer();
-  }
-
-  if (event.target.id === 'confirm-order-btn') {
-    showToast('Pedido confirmado com sucesso!');
-    openDrawer(
-      'Pedido confirmado',
-      `
-        <div class="drawer-card">
-          <p>Seu pedido foi enviado para a cozinha e a entrega estimada é de 30 minutos.</p>
-          <ul class="drawer-list">
-            <li>Pagamento: PIX, cartão ou dinheiro na entrega</li>
-            <li>Status: Em preparo</li>
-            <li>Entrega estimada: 30 min</li>
-          </ul>
-        </div>
-      `,
-    );
-  }
-});
-
-chips.forEach((chip) => {
-  chip.addEventListener('click', () => {
+  const chip = event.target.closest('.chip');
+  if (chip?.dataset.category) {
     setActiveCategory(chip.dataset.category);
-    showToast(`Filtro aplicado: ${chip.textContent.trim()}.`);
-  });
-});
+    return;
+  }
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinks.forEach((item) => item.classList.remove('active'));
-    link.classList.add('active');
-  });
-});
+  if (event.target.closest('#close-drawer-btn') || event.target === drawer) {
+    closeDrawer();
+    return;
+  }
 
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeDrawer();
+  if (event.target.closest('#see-all-btn')) {
+    window.location.href = 'cardapio.html';
+    return;
+  }
+
+  if (event.target.closest('#filter-drinks-btn')) {
+    setActiveCategory('drink');
+    document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+
+  if (event.target.closest('#contact-btn')) {
+    showToast('Atendimento: peça pelo WhatsApp da loja.');
+    return;
+  }
+
+  if (event.target.closest('[data-quick-add="combo"]')) {
+    [11, 19].forEach(addToCart);
+  }
 });
 
 renderCards();
