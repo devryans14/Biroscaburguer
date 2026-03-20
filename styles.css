@@ -62,10 +62,17 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .brand { display: flex; align-items: center; gap: 14px; }
 .brand__logo {
-  width: clamp(140px, 18vw, 190px);
+  width: clamp(84px, 10vw, 118px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 24px;
   height: auto;
   display: block;
+  border: 2px solid rgba(255, 191, 47, 0.22);
   filter: drop-shadow(0 10px 18px rgba(0,0,0,.22));
+}
+.brand__logo--compact {
+  width: clamp(72px, 9vw, 96px);
 }
 .brand h1 { margin: 0; font-size: clamp(1.7rem, 2vw, 2rem); }
 .brand h1 span { color: var(--gold); }
@@ -194,7 +201,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
   padding: 40px;
 }
 .logo-showcase__main {
-  width: min(88%, 540px);
+  width: min(78%, 420px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 40px;
+  border: 3px solid rgba(255, 210, 112, 0.25);
   height: auto;
   filter: drop-shadow(0 28px 36px rgba(0, 0, 0, 0.42));
 }
