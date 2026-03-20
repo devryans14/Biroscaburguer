@@ -22,26 +22,35 @@
       </div>
 
       <nav class="nav">
+
+        <a class="active nav-link" href="#inicio">Início</a>
+        <a class="nav-link" href="#menu">Cardápio</a>
+        <a class="nav-link" href="#combos">Combos</a>
+        <a class="nav-link" href="#bebidas">Bebidas</a>
+        <a class="nav-link" href="#promocoes">Promoções</a>
+        <a class="nav-link" href="#contato">Contato</a>
+
         <a class="active" href="index.html">Início</a>
         <a href="cardapio.html">Cardápio</a>
         <a href="#combos">Combos</a>
         <a href="#bebidas">Bebidas</a>
         <a href="#promocoes">Promoções</a>
         <a href="#contato">Contato</a>
+
       </nav>
 
       <div class="topbar__actions">
-        <button class="order-chip">
+        <button class="order-chip" id="open-cart-btn" type="button">
           <span>🛒</span>
           Meu Pedido
-          <strong id="cart-badge">2</strong>
+          <strong id="cart-badge">0</strong>
         </button>
-        <button class="avatar-btn">👤</button>
+        <button class="avatar-btn" id="profile-btn" type="button" aria-label="Abrir perfil">👤</button>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="inicio">
         <div class="hero__content">
           <span class="eyebrow">Entrega rápida • Ingredientes premium</span>
           <h2>A <span>Birosca Burguer</span><br>chegou na área.</h2>
@@ -62,11 +71,12 @@
         </div>
       </section>
 
-      <section class="chips-row">
-        <button class="chip chip--active">🍔 Hambúrgueres</button>
-        <button class="chip">🍟 Porções</button>
-        <button class="chip">🥤 Bebidas</button>
-        <button class="chip">🍨 Sobremesas</button>
+      <section class="chips-row" aria-label="Filtrar categorias">
+        <button class="chip chip--active" type="button" data-category="all">🍽️ Todos</button>
+        <button class="chip" type="button" data-category="burger">🍔 Hambúrgueres</button>
+        <button class="chip" type="button" data-category="side">🍟 Porções</button>
+        <button class="chip" type="button" data-category="drink">🥤 Bebidas</button>
+        <button class="chip" type="button" data-category="dessert">🍨 Sobremesas</button>
       </section>
 
       <section class="content-grid" id="menu">
@@ -74,15 +84,19 @@
           <div class="section-head">
             <div>
               <h3>Destaques do Cardápio 🔥</h3>
-              <p>Escolha seus favoritos e monte seu pedido em segundos.</p>
+              <p id="menu-description">Escolha seus favoritos e monte seu pedido em segundos.</p>
             </div>
+
+            <button type="button" class="see-all" id="see-all-btn">Ver tudo →</button>
+
             <a href="cardapio.html" class="see-all">Ver tudo →</a>
+
           </div>
 
           <div class="cards" id="cards"></div>
         </div>
 
-        <aside class="order-panel">
+        <aside class="order-panel" id="cart-panel">
           <div class="order-panel__head">
             <div>
               <h3>Seu Pedido</h3>
@@ -95,8 +109,37 @@
             <span>Subtotal</span>
             <strong id="subtotal-price">R$ 0,00</strong>
           </div>
-          <button class="checkout-btn">🔒 Finalizar Pedido</button>
+          <button class="checkout-btn" id="checkout-btn" type="button">🔒 Finalizar Pedido</button>
         </aside>
+      </section>
+
+      <section class="feature-sections">
+        <article class="feature-card" id="combos">
+          <div>
+            <span class="feature-icon">🍟</span>
+            <h3>Combos prontos</h3>
+            <p>Monte seu combo com hambúrguer, batata e bebida em um clique.</p>
+          </div>
+          <button type="button" class="secondary-btn" data-quick-add="combo">Adicionar combo clássico</button>
+        </article>
+
+        <article class="feature-card" id="bebidas">
+          <div>
+            <span class="feature-icon">🥤</span>
+            <h3>Bebidas geladas</h3>
+            <p>Filtre o cardápio automaticamente para ver apenas bebidas disponíveis.</p>
+          </div>
+          <button type="button" class="secondary-btn" id="filter-drinks-btn">Ver bebidas</button>
+        </article>
+
+        <article class="feature-card" id="contato">
+          <div>
+            <span class="feature-icon">📍</span>
+            <h3>Contato e atendimento</h3>
+            <p>Acesse nossos canais para suporte, horário de funcionamento e endereço.</p>
+          </div>
+          <button type="button" class="secondary-btn" id="contact-btn">Abrir contato</button>
+        </article>
       </section>
 
       <section class="highlights" id="promocoes">
@@ -131,6 +174,21 @@
       </section>
     </main>
   </div>
+
+  <section class="drawer" id="details-drawer" aria-live="polite">
+    <div class="drawer__content">
+      <div class="drawer__head">
+        <div>
+          <p class="drawer__eyebrow">Central BurgerHub</p>
+          <h3 id="drawer-title">Detalhes</h3>
+        </div>
+        <button type="button" class="drawer__close" id="close-drawer-btn" aria-label="Fechar painel">✕</button>
+      </div>
+      <div id="drawer-body"></div>
+    </div>
+  </section>
+
+  <div class="toast" id="toast"></div>
 
   <script src="script.js"></script>
 </body>
