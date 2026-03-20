@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BurgerHub | O melhor hambúrguer, feito na hora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand__icon">🍔</div>
+        <div>
+          <h1>Burger<span>Hub</span></h1>
+          <p>Sabor que vicia.</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="active" href="#">Início</a>
+        <a href="#menu">Cardápio</a>
+        <a href="#combos">Combos</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="order-chip">
+          <span>🛒</span>
+          Meu Pedido
+          <strong id="cart-badge">2</strong>
+        </button>
+        <button class="avatar-btn">👤</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <span class="eyebrow">Entrega rápida • Ingredientes premium</span>
+          <h2>O melhor hambúrguer,<br><span>feito na hora.</span></h2>
+          <p>Suculentos, artesanais e com ingredientes selecionados para você curtir do seu jeito.</p>
+          <div class="hero__buttons">
+            <a class="btn btn--primary" href="#menu">🍔 Ver Cardápio</a>
+            <a class="btn btn--dark" href="#combos">🍟 Ver Combos</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="glow glow--one"></div>
+          <div class="glow glow--two"></div>
+          <div class="combo-scene">
+            <div class="soda">🥤</div>
+            <div class="burger-art">
+              <span class="bun top"></span>
+              <span class="lettuce"></span>
+              <span class="cheese"></span>
+              <span class="patty"></span>
+              <span class="tomato"></span>
+              <span class="bun bottom"></span>
+            </div>
+            <div class="fries">🍟</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chips-row">
+        <button class="chip chip--active">🍔 Hambúrgueres</button>
+        <button class="chip">🍟 Porções</button>
+        <button class="chip">🥤 Bebidas</button>
+        <button class="chip">🍨 Sobremesas</button>
+      </section>
+
+      <section class="content-grid" id="menu">
+        <div class="menu-panel">
+          <div class="section-head">
+            <div>
+              <h3>Destaques do Cardápio 🔥</h3>
+              <p>Escolha seus favoritos e monte seu pedido em segundos.</p>
+            </div>
+            <a href="#" class="see-all">Ver tudo →</a>
+          </div>
+
+          <div class="cards" id="cards"></div>
+        </div>
+
+        <aside class="order-panel">
+          <div class="order-panel__head">
+            <div>
+              <h3>Seu Pedido</h3>
+              <p>Resumo atualizado em tempo real.</p>
+            </div>
+            <span>🔒</span>
+          </div>
+          <div class="cart-items" id="cart-items"></div>
+          <div class="subtotal">
+            <span>Subtotal</span>
+            <strong id="subtotal-price">R$ 0,00</strong>
+          </div>
+          <button class="checkout-btn">🔒 Finalizar Pedido</button>
+        </aside>
+      </section>
+
+      <section class="highlights" id="promocoes">
+        <article>
+          <span>🛵</span>
+          <div>
+            <h4>Entrega rápida</h4>
+            <p>Em até 30 minutos</p>
+          </div>
+        </article>
+        <article>
+          <span>💳</span>
+          <div>
+            <h4>Pagamento seguro</h4>
+            <p>Cartão, PIX ou dinheiro</p>
+          </div>
+        </article>
+        <article>
+          <span>🥗</span>
+          <div>
+            <h4>Ingredientes frescos</h4>
+            <p>Feito na hora</p>
+          </div>
+        </article>
+        <article>
+          <span>⭐</span>
+          <div>
+            <h4>Avaliações</h4>
+            <p>4,9 ★ (2.300+)</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
