@@ -2,7 +2,7 @@ const menuItems = [
   {
     id: 1,
     name: 'Cheddar Bacon',
-    description: 'Pão artesanal, cheddar, bacon crocante, alface e molho especial.',
+    description: 'Pão artesanal, cheddar cremoso, bacon crocante, alface e molho especial.',
     price: 25.9,
     emoji: '🍔',
     category: 'burger',
@@ -10,13 +10,45 @@ const menuItems = [
   {
     id: 2,
     name: 'Duplo Smash',
-    description: '2 carnes suculentas, queijo derretido e molho da casa.',
+    description: 'Dois smash burgers, queijo derretido, cebola caramelizada e molho da casa.',
     price: 27.9,
     emoji: '🍔',
     category: 'burger',
   },
   {
     id: 3,
+    name: 'Chicken Crispy',
+    description: 'Frango crocante, queijo prato, alface americana e maionese verde.',
+    price: 24.9,
+    emoji: '🍔',
+    category: 'burger',
+  },
+  {
+    id: 4,
+    name: 'Burger Salad',
+    description: 'Blend bovino, queijo minas, rúcula, tomate fresco e molho de ervas.',
+    price: 26.9,
+    emoji: '🍔',
+    category: 'burger',
+  },
+  {
+    id: 5,
+    name: 'Monster Onion',
+    description: 'Hambúrguer alto, onion rings, cheddar, picles e barbecue defumado.',
+    price: 29.9,
+    emoji: '🍔',
+    category: 'burger',
+  },
+  {
+    id: 6,
+    name: 'Pulled Beef',
+    description: 'Carne desfiada, queijo meia cura, cebola roxa e maionese especial.',
+    price: 31.9,
+    emoji: '🍔',
+    category: 'burger',
+  },
+  {
+    id: 7,
     name: 'Batata Frita',
     description: 'Porção grande crocante com molho burgerhub incluso.',
     price: 9.9,
@@ -24,12 +56,13 @@ const menuItems = [
     category: 'side',
   },
   {
-    id: 4,
+    id: 8,
     name: 'Milk Shake',
     description: 'Chocolate, morango ou ovomaltine, batido na hora.',
     price: 16.9,
     emoji: '🥤',
     category: 'drink',
+
   },
   {
     id: 5,
@@ -57,14 +90,22 @@ const categoryLabels = {
   dessert: 'Sobremesas para fechar o pedido com chave de ouro.',
 };
 
+  },
+];
+
+const featuredItems = menuItems.slice(0, 4);
+const burgerItems = menuItems.filter((item) => item.category === 'burger');
+
+
 const cart = [
   { id: 1, quantity: 1 },
-  { id: 4, quantity: 1 },
+  { id: 8, quantity: 1 },
 ];
 
 let activeCategory = 'all';
 
 const cardsContainer = document.getElementById('cards');
+const allBurgersGrid = document.getElementById('all-burgers-grid');
 const cartItemsContainer = document.getElementById('cart-items');
 const subtotalPrice = document.getElementById('subtotal-price');
 const cartBadge = document.getElementById('cart-badge');
@@ -83,6 +124,7 @@ const formatBRL = (value) =>
 function getItem(id) {
   return menuItems.find((item) => item.id === id);
 }
+
 
 function getFilteredItems() {
   if (activeCategory === 'all') return menuItems;
@@ -156,6 +198,47 @@ function renderCart() {
                 <span>${quantity}</span>
                 <button type="button" data-action="increase" data-id="${id}">+</button>
               </div>
+
+function createCardMarkup(item) {
+  return `
+    <article class="menu-card">
+      <div class="menu-card__image">${item.emoji}</div>
+      <h4>${item.name}</h4>
+      <p>${item.description}</p>
+      <div class="menu-card__bottom">
+        <span class="price">${formatBRL(item.price)}</span>
+        <button class="add-btn" data-id="${item.id}" aria-label="Adicionar ${item.name}">+</button>
+      </div>
+    </article>
+  `;
+}
+
+function renderCards() {
+  if (!cardsContainer) return;
+  cardsContainer.innerHTML = featuredItems.map(createCardMarkup).join('');
+}
+
+function renderAllBurgers() {
+  if (!allBurgersGrid) return;
+  allBurgersGrid.innerHTML = burgerItems.map(createCardMarkup).join('');
+}
+
+function renderCart() {
+  if (!cartItemsContainer || !subtotalPrice || !cartBadge) return;
+
+  cartItemsContainer.innerHTML = cart
+    .map(({ id, quantity }) => {
+      const item = getItem(id);
+      return `
+        <article class="cart-item">
+          <div class="cart-item__thumb">${item.emoji}</div>
+          <div class="cart-item__info">
+            <h4>${item.name}</h4>
+            <div class="qty-box">
+              <button data-action="decrease" data-id="${id}">−</button>
+              <span>${quantity}</span>
+              <button data-action="increase" data-id="${id}">+</button>
+
             </div>
             <strong>${formatBRL(item.price * quantity)}</strong>
           </article>
@@ -207,6 +290,7 @@ function updateCart(id, type) {
 
   renderCart();
 }
+
 
 function showItemDetails(id) {
   const item = getItem(id);
@@ -301,14 +385,27 @@ cardsContainer.addEventListener('click', (event) => {
   if (detailsButton) {
     showItemDetails(Number(detailsButton.dataset.id));
   }
+
+[cardsContainer, allBurgersGrid].forEach((container) => {
+  if (!container) return;
+
+  container.addEventListener('click', (event) => {
+    const button = event.target.closest('.add-btn');
+    if (!button) return;
+
+    updateCart(Number(button.dataset.id), 'increase');
+  });
+
 });
 
-cartItemsContainer.addEventListener('click', (event) => {
-  const button = event.target.closest('button[data-action]');
-  if (!button) return;
+if (cartItemsContainer) {
+  cartItemsContainer.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-action]');
+    if (!button) return;
 
-  updateCart(Number(button.dataset.id), button.dataset.action);
-});
+    updateCart(Number(button.dataset.id), button.dataset.action);
+  });
+}
 
 document.getElementById('see-all-btn').addEventListener('click', () => {
   setActiveCategory('all');
@@ -381,4 +478,5 @@ document.addEventListener('keydown', (event) => {
 });
 
 renderCards();
+renderAllBurgers();
 renderCart();
