@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Birosca Burguer | O melhor hambúrguer, feito na hora</title>
+  <title>Birosca Burguer | Burgers zoados no visual, sérios no sabor</title>
   <link rel="icon" type="image/svg+xml" href="assets/logo-birosca.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,8 +16,9 @@
       <div class="brand">
         <img class="brand__logo" src="assets/logo-birosca.svg" alt="Logo da Birosca Burguer com Bob Esponja servindo hambúrgueres" />
         <div>
+          <p class="brand__kicker">Lanchonete irreverente</p>
           <h1>Birosca <span>Burguer</span></h1>
-          <p>Seu sabor de responsa.</p>
+          <p>Caótico no visual, caprichado no smash.</p>
         </div>
       </div>
 
@@ -36,32 +37,39 @@
           Meu Pedido
           <strong id="cart-badge">0</strong>
         </button>
-        <button class="avatar-btn" id="profile-btn" type="button" aria-label="Abrir perfil">👤</button>
+        <button class="avatar-btn" id="profile-btn" type="button" aria-label="Abrir perfil">🍔</button>
       </div>
     </header>
 
     <main>
       <section class="hero" id="inicio">
         <div class="hero__content">
-          <span class="eyebrow">Entrega rápida • Ingredientes premium</span>
-          <h2>A <span>Birosca Burguer</span><br>chegou na área.</h2>
+          <span class="eyebrow">Explosão de sabor • identidade própria • clima de boteco pop</span>
+          <h2>Uma marca com cara de <span>lanchonete divertida</span> e fome de destaque.</h2>
 
-          <p>Agora os produtos foram cadastrados com base no cardápio enviado, incluindo ingredientes completos e fotos com visual realista.</p>
+          <p>A nova identidade do site foi pensada para conversar com o seu logo: vibrante, irreverente, com energia de promoção chamativa, tipografia amigável e cores quentes que lembram cheddar, ketchup e chapa acesa.</p>
 
-          <p>A identidade visual da Birosca Burguer agora ganha destaque com a arte enviada, aplicada como logo principal da marca.</p>
+          <p>O resultado mistura laranja intenso, vermelho marcante, amarelo tostado e contrastes escuros para o cardápio continuar legível sem perder a personalidade “Birosca”.</p>
 
           <div class="hero__buttons">
             <a class="btn btn--primary" href="cardapio.html">🍔 Ver Cardápio</a>
-            <a class="btn btn--dark" href="#combos">🍟 Ver Combos</a>
+            <a class="btn btn--dark" href="#promocoes">🔥 Ver identidade aplicada</a>
           </div>
+
+          <ul class="hero-points" aria-label="Pilares da identidade visual">
+            <li>Paleta quente com laranja principal</li>
+            <li>Detalhes inspirados em selo promocional</li>
+            <li>Tom visual mais divertido e popular</li>
+          </ul>
         </div>
 
         <div class="hero__visual">
           <div class="glow glow--one"></div>
           <div class="glow glow--two"></div>
           <div class="logo-showcase">
+            <span class="burst-tag">Identidade nova</span>
             <img class="logo-showcase__main" src="assets/logo-birosca.svg" alt="Arte principal da Birosca Burguer com Bob Esponja e hambúrgueres" />
-            <div class="logo-showcase__badge">🍔 Nova logo aplicada no topo, no destaque principal e no favicon.</div>
+            <div class="logo-showcase__badge">Visual inspirado no próprio logo: mais energia, mais contraste e mais cara de marca memorável.</div>
           </div>
         </div>
       </section>
@@ -111,7 +119,7 @@
           <div>
             <span class="feature-icon">🍟</span>
             <h3>Combos prontos</h3>
-            <p>Monte seu combo com hambúrguer, batata e bebida em um clique.</p>
+            <p>Blocos visuais fortes, chamadas diretas e clima de promoção de balcão para combinar com o selo explosivo do logo.</p>
           </div>
           <button type="button" class="secondary-btn" data-quick-add="combo">Adicionar combo clássico</button>
         </article>
@@ -120,7 +128,7 @@
           <div>
             <span class="feature-icon">🥤</span>
             <h3>Bebidas geladas</h3>
-            <p>Filtre o cardápio automaticamente para ver apenas bebidas disponíveis.</p>
+            <p>O contraste escuro ajuda a destacar as categorias sem competir com a arte principal da marca.</p>
           </div>
           <button type="button" class="secondary-btn" id="filter-drinks-btn">Ver bebidas</button>
         </article>
@@ -129,7 +137,7 @@
           <div>
             <span class="feature-icon">📍</span>
             <h3>Contato e atendimento</h3>
-            <p>Acesse nossos canais para suporte, horário de funcionamento e endereço.</p>
+            <p>A comunicação ficou mais popular, acessível e espontânea, no mesmo espírito visual do seu logo.</p>
           </div>
           <button type="button" class="secondary-btn" id="contact-btn">Abrir contato</button>
         </article>
@@ -137,31 +145,31 @@
 
       <section class="highlights" id="promocoes">
         <article>
-          <span>🛵</span>
+          <span>🎨</span>
           <div>
-            <h4>Entrega rápida</h4>
-            <p>Em até 30 minutos</p>
+            <h4>Paleta quente</h4>
+            <p>Laranja, ketchup e cheddar</p>
           </div>
         </article>
         <article>
-          <span>💳</span>
+          <span>✍️</span>
           <div>
-            <h4>Pagamento seguro</h4>
-            <p>Cartão, PIX ou dinheiro</p>
+            <h4>Tipografia amigável</h4>
+            <p>Títulos com mais carisma</p>
           </div>
         </article>
         <article>
-          <span>🥗</span>
+          <span>💥</span>
           <div>
-            <h4>Ingredientes frescos</h4>
-            <p>Feito na hora</p>
+            <h4>Clima promocional</h4>
+            <p>Visual chamativo e popular</p>
           </div>
         </article>
         <article>
-          <span>⭐</span>
+          <span>🧽</span>
           <div>
-            <h4>Avaliações</h4>
-            <p>4,9 ★ (2.300+)</p>
+            <h4>Tom divertido</h4>
+            <p>Sem perder a leitura do cardápio</p>
           </div>
         </article>
       </section>
