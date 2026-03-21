@@ -31,8 +31,8 @@ const menuItems = [
     shortCategory: 'burger',
     categoryLabel: 'Cheddar cremoso',
     description:
-      'Pão, hambúrguer, molho cheddar, alface, tomate, milho e batata-palha.',
-    ingredients: ['Pão', 'Hambúrguer', 'Molho cheddar', 'Alface', 'Tomate', 'Milho', 'Batata-palha'],
+      'Pão, hambúrguer, molho cheddar, alface, tomate e batata-palha.',
+    ingredients: ['Pão', 'Hambúrguer', 'Molho cheddar', 'Alface', 'Tomate', 'Batata-palha'],
     price: 15,
     image:
       'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=80',
